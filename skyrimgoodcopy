@@ -1,9 +1,9 @@
-class Skyrim
+class SkyrimPro
 { //I didnt use arrays that why code is massive 
   public static void HumanSword (int health) //Code for sword if you pick it
-  {
-    int enemy = 5;                   //variables
-    double chance = 0;
+  {                                  //Method for sword 
+    int enemy = 5; //enemy health                  //variables
+    double chance = 0;               //why name it human sword because the method with human are for human enemys 
     double enemyAttack = 0;
     int dodge = 0;
     int yourAttack = 0;
@@ -51,7 +51,7 @@ class Skyrim
         {
           chance = (Math.random()*(10-1))+1;
           chance = Math.round(chance);
-          if (chance <= 8)    //doge chance
+          if (chance <= 8)    //dodge chance
           {
             System.out.println("You dodged the attack!");
           }
@@ -66,7 +66,7 @@ class Skyrim
         {
           System.out.println("Bad move! The enemy easily hits you!");
           System.out.println("You took 2 damage!");
-          health = health-2; //if you fail a doge this code appears
+          health = health-2; //if you fail a dodge this code appears
         }
         if (dodge == 3)
         {
@@ -576,10 +576,10 @@ class Skyrim
     System.out.println("You died!");
     System.exit(0);
   }
-  public static void AnimalSword (int health, int ammo)
+  public static void AnimalSword (int health, int ammo) //this method is for when your fighting a beast there are two in total 
   {
     int enemy = 8;
-    double chance = 0;
+    double chance = 0;                    
     double enemyAttack = 0;
     int dodge = 0;
     int yourAttack = 0;
@@ -802,7 +802,7 @@ class Skyrim
     System.out.println("You died!");
     System.exit(0);
   }
-  public static void AnimalDagger (int health, int ammo)
+  public static void AnimalDagger (int health, int ammo) //if you dagger beast method
   {
     int enemy = 8;
     double chance = 0;
@@ -904,7 +904,7 @@ class Skyrim
           System.out.println("You took 2 damage!");
           health = health-2;
         }
-        if (dodge == 3)
+        if (dodge == 3)    //called dodge but really its just choice 3
         {
           System.out.println("Only a sword can deflect!");
           System.out.println("You took 2 damage!");
@@ -1028,7 +1028,7 @@ class Skyrim
     System.out.println("You died!");
     System.exit(0);
   }
-  public static void AnimalAxe (int health, int ammo)
+  public static void AnimalAxe (int health, int ammo) //if you use axe for beast fight
   {
     int enemy = 8;
     double chance = 0;
@@ -1254,7 +1254,7 @@ class Skyrim
     System.out.println("You died!");
     System.exit(0);
   }
-   public static void DragonSword (int health, int ammo)
+   public static void DragonSword (int health, int ammo) //this method is for when your facing the dragon with sword
   {
     int enemy = 15;
     double chance = 0;
@@ -1572,7 +1572,7 @@ class Skyrim
     System.out.println("You died!");
     System.exit(0);
   }
-  public static void DragonDagger (int health, int ammo)
+  public static void DragonDagger (int health, int ammo) //if you use dagger when facing dragon
   {
     int enemy = 15;
     double chance = 0;
@@ -1890,7 +1890,7 @@ class Skyrim
     System.out.println("You died!");
     System.exit(0);
   }
-  public static void DragonAxe (int health, int ammo)
+  public static void DragonAxe (int health, int ammo) //if you use axe when facing dragon
   {
     int enemy = 15;
     double chance = 0;
@@ -2210,22 +2210,24 @@ class Skyrim
   }
   public static void main (String args[])
   {
-    double chance = 0;
-    int weapon = 0;
+    double chance = 0; //Variables
+    int weapon = 0;            
     int GuardFight = 0;
-    int health = 5;
-    int ammo=5;
+    int health = 5; //your health 
+    int ammo=5; //ammo for bow is infinte after each battle 
+    System.out.println("Story:You are prisoner about to get executed");
+    System.out.println("Rules:Just follow the story and try not to die make correct choices when asked to...");
     System.out.println("You awake on a wagon heading down a path in the middle of a forest.");
     System.out.println("Will you wait on the wagon?(Enter 1 for Yes or Enter 2 for No)");
-    int Ques1=In.getInt();
+    int Ques1=In.getInt(); //getting user input
     if(Ques1==1)
     {
       System.out.println("You decide to wait.");
       System.out.println("You continue to wait in the wagon until you reach a small village.");
       System.out.print("The guards force you out of the wagon and take you to the executioner.");
-      int x = 3;
+      int x = 2;
       int y = 0;
-      int Ques2=0;
+      int Ques2=0;  //loops the sentence found this code when i was researching loops
     while(x>y && Ques2!=2)
     {
     System.out.println("You are about to be executed. Will you wait to be last?(Enter 1 for Yes or Enter 2 for No)");
@@ -2240,7 +2242,7 @@ class Skyrim
       System.out.println("You decide to get it over with.");
       System.out.println("The executioner beheads you.");
     }
-    y++;
+    y++; //this helped me stop the looping a sentence, if i remove this the sentece keeps on looping
     if(x==y)
     {
       System.out.println("However you are called up to be executed.");
@@ -2259,7 +2261,7 @@ class Skyrim
       {
         System.out.println("You decide to take the sword.");
       }
-      if(weapon==2)
+      if(weapon==2)                                                         //wepons 
       {
         System.out.println("You decide to take the dagger.");
       }
@@ -2272,7 +2274,7 @@ class Skyrim
       System.out.println("The guards are walking towards you.");
       System.out.println("Will you fight them? Enter 1 to fight enter 2 to talk");
       int Ques5=In.getInt();
-      if(Ques5==1)
+      if(Ques5==1)                         //you can talk and do it peacefully or go straight into fighting
       {
         GuardFight = 1;
         System.out.println("You decide to fight them");
@@ -2298,7 +2300,7 @@ class Skyrim
         System.out.println("You decide you can tell them that your either a prisoner, guard, civilian or you could stay silent");
         System.out.println("Enter 1 for prisoner 2 for guard 3 for civilian or 4 to stay silent");
         int Ques6=In.getInt();
-        if(Ques6==1)
+        if(Ques6==1)    //you are given 4 options of how your gonna intract with the gurads
         {
           System.out.println("You tell them you are a prisoner");
           System.out.println("The guards attack you");
@@ -2307,7 +2309,7 @@ class Skyrim
         {
           HumanSword(health);
         }
-        if (weapon == 2)
+        if (weapon == 2)             //methods for the different wepons you chose earlier
         {
           HumanDagger(health);
         }
@@ -2320,11 +2322,11 @@ class Skyrim
         {
           System.out.println("You tell them you are a guard");
           System.out.println("You tell them you're guards, and you were asleep when the dragon came so you're not in your uniform.");
-          if(weapon==1 || weapon==3)
+          if(weapon==1 || weapon==3) //or statment if you have wepon 1 sword or wepon 3 axe the guards belive you this is because dagger is a bandit wepon
           {
             System.out.print("The guards believe you and tell you to continue on.");
           }
-          if(weapon==2)
+          if(weapon==2) // they attack if you have a dagger
           {
             System.out.print("The guard doesn't believe you since he knows a guard wouldn't leave his house without his sword or axe.");
             System.out.println("The guards attack you.");
@@ -2348,7 +2350,7 @@ class Skyrim
           System.out.println("You tell them you are a civilian");
           if(weapon==2)
           {
-            System.out.print("The guards believe you and wish you luck.");
+            System.out.print("The guards believe you and wish you luck."); //they wil think your lying if you have sword or axe
           }
           if(weapon==1 || weapon==3)
           {
@@ -2371,7 +2373,7 @@ class Skyrim
         }
         if(Ques6==4)
         {
-          System.out.println("You decide to not say anything");
+          System.out.println("You decide to not say anything"); //they automaticly attack if you remain silent
           System.out.println("The guards attack you.");
           if (weapon == 1)
           {
@@ -2389,7 +2391,7 @@ class Skyrim
       }
       System.out.println(" You and Harambe escape the village and run down the main road.");
       System.out.print("You spot a cave to left hidden in the side of a mountain.");
-      System.out.println(" You see two diffrent paths ahead of you.");
+      System.out.println(" You see two diffrent paths ahead of you.");  //there are two paths you can chose to go by
       System.out.println("The first path is a road the second a cave.");
       System.out.println("Enter 1 to follow the road or enter 2 to enter the cave ");
       int Ques7=In.getInt();
@@ -2398,7 +2400,7 @@ class Skyrim
         System.out.println("You decide to follow the road");
         System.out.println("You and Harambe continue along the road when you spot three bandits looting a body.");
         System.out.println("The bandits see you before you and Harambe are able to hide and come running towards you.");
-        if (weapon == 1)
+        if (weapon == 1) 
         {
           HumanSword(health);
         }
@@ -2417,7 +2419,7 @@ class Skyrim
          {
            System.out.println("Will you open the bag or leave it?");
            System.out.println("Enter 1 to open bag or 2 to leave it");
-           int Ques8=In.getInt();
+           int Ques8=In.getInt();  //its gonna loop until you search the bag because you need the bow inside for later
            if(Ques8==1)
            {
              System.out.println("You decide to open the bag");
@@ -2429,13 +2431,13 @@ class Skyrim
              System.out.println("You decide to not open the bag and instead check the pouches of the fallen bandits");
              System.out.println("You check the bandits pouches and find a note with a message scribbled on it.");
              System.out.println("Only the one with the name Dovahkiin can tame the dragon");
-           }
+           }  
          }
             System.out.print("You and Harambe decide not to walk on the road but in the forested area next to it.");
             System.out.println(" As you and Harambe are walking through the forest you see a tiger feasting on a dead antelope.");
             System.out.println("You decide to either sneak around or attack it.");
             System.out.println("Enter 1 to sneak around or 2 to attack it");
-            int Ques10=In.getInt();
+            int Ques10=In.getInt(); //
             if(Ques10==1)
             {
               System.out.println("You decide to sneak around");
@@ -2456,10 +2458,10 @@ class Skyrim
                 System.out.println("You and Harambe move quickly past and you step on a stick that cracks.");
                 System.out.print("The tiger looks over his shoulder and sees you and comes running towards you.");
                 if (weapon == 1)
-                {
+                {                                       //sneaking fast will make the tifer aware of your presence 
                   AnimalSword(health, ammo);
                 }
-                if (weapon == 2)
+                if (weapon == 2)                       //beast method because your gonna fight the tigger
                 {
                   AnimalDagger(health, ammo);
                 }
@@ -2494,7 +2496,7 @@ class Skyrim
           System.out.print("As you're walking through the cave you see a dark figure ahead, you get closer and realize it's a skeleton.");
           System.out.print("You try to turn around but there's another one behind you, you have no choice but to fight.");
           if (weapon == 1)
-          {
+          {                          //cave you fight different enemies
             HumanSword(health);
           }
           if (weapon == 2)
@@ -2522,7 +2524,7 @@ class Skyrim
               System.out.println("You get to an open area in the cave with sunlight shining through a hole in the ceiling.");
               System.out.print("You see a bear sleeping next to a rock in the corner.");
               LoopQues9++;
-            }
+            }                       //bear is in cave tigger is on the road
             if(Ques9==2)
             {
               System.out.println("You decide to not open the chest and instead check the skeletons");
@@ -2549,7 +2551,7 @@ class Skyrim
             {
               AnimalSword(health, ammo);
             }
-            if (weapon == 2)
+            if (weapon == 2)                              //beast method for when ur fighting the bear
             {
               AnimalDagger(health, ammo);
             }
@@ -2595,7 +2597,7 @@ class Skyrim
         System.out.print("The dragons the same height as the watchtower and stares you right in your eyes.");
         System.out.print("You can feel the dragons glare burning your soul.");
         String Dovahkiin="Dovahkiin";
-        if(name.equals(Dovahkiin))
+        if(name.equals(Dovahkiin)) //this sometimes doesnt work 
         {
           System.out.println("Will you talk to the Dragon?");
           System.out.println("Enter 1 to talk to the Dragon or 2 to fight it");
@@ -2618,7 +2620,7 @@ class Skyrim
               System.out.println("You decide to fight the Dragon");
               System.out.print("The Dragon opens its mouth and burning flames come shooting out.");
               if (weapon == 1)
-              {
+              {                                     //fighting the dragon will happen in both routes
                 DragonSword(health, ammo);
               }
               if (weapon == 2)
@@ -2641,7 +2643,7 @@ class Skyrim
               {
                 DragonSword(health, ammo);
               }
-              if (weapon == 2)
+              if (weapon == 2)                         //methods
               {
                 DragonDagger(health, ammo);
               }
@@ -2658,7 +2660,7 @@ class Skyrim
       System.out.println("You try to dodge it but it still manages to hit you in the arm.");
       System.out.println("You turn around fully and see that it was Harambe who is already nocking another arrow.");
       System.out.println("You start running towards him drawing your weapon.");
-      System.out.print("In shock you ask him why hes doing this.");
+      System.out.print("In shock you ask him why hes doing this.");                      
       System.out.print("He tells you that he doesn't want to live on the run.");
       System.out.print("He wants to go back to his family and not be a prisoner anymore");
       System.out.print("He says that maybe if they think he killed the dragon he would be set free.");
@@ -2666,7 +2668,7 @@ class Skyrim
       {
         HumanSword(health);
       }
-      if (weapon == 2)
+      if (weapon == 2)       //endings with different outcomes this violent ending happens if you go through the road
       {
         HumanDagger(health);
       }
@@ -2691,14 +2693,14 @@ class Skyrim
       System.out.println("You decide that you can either try to talk to him quickly or fight him.");
       System.out.println("Enter 1 to talk or 2 to fight");
       int Ques16=In.getInt();
-      if(Ques16==1)
+      if(Ques16==1)                                   //this choice happens when you go thorugh the cave
       {
         System.out.println("You decide to talk to him");
         System.out.println("Harambe tells you to fight him.");
         int W17=0;
         while(W17==0)
         {
-          System.out.println("Enter 1 to drop your weapons 2 to aim your weapons at 3 to persuade him or 4 to remain defensive");
+          System.out.println("Enter 1 to drop your weapons 2 to aim your weapons at 3 to persuade him ");
           int Ques17=In.getInt();
           if(Ques17==1)
           {
@@ -2765,9 +2767,9 @@ class Skyrim
             System.out.println("You look at the sunset, then continue down the road.");
             System.out.println("The End");
             System.out.println("You beat the game! Neutral ending.");
-            W17++;
+            W17++;         //need 
           }
-          if(Ques17==4)
+          if(Ques17==4)                                             
           {
             System.out.println("You decide to remain defensive");
             System.out.println("You both stare at eachother waiting for the other to make a move");
@@ -2798,8 +2800,7 @@ class Skyrim
     }
     }
     }
-    
-    if(Ques1==2)
+    if(Ques1==2)              //the ending for dieing at the begging :D 
     {
       System.out.println("You decide to jump off.");
       System.out.println("You jump off and break your ankle, you die.");
