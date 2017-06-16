@@ -4,7 +4,7 @@ class SkyrimPro
   {                                  //Method for sword 
     int enemy = 5; //enemy health                  //variables
     double chance = 0;               //why name it human sword because the method with human are for human enemys 
-    double enemyAttack = 0;
+    double enemyAttack = 0;          //double is basicly REAL(turing) it accepts decimals 
     int dodge = 0;
     int yourAttack = 0;
     while (health > 0)
@@ -16,22 +16,22 @@ class SkyrimPro
       if (yourAttack == 1)
       {
         System.out.println("You attack with your sword!");
-        chance = (Math.random()*(10-1))+1;
-        chance = Math.round(chance);
-        if (chance <= 7)      //7 percent chance of landing the blow 
+        chance = (Math.random()*(10-1))+1;//Math.random() returns a number from zero to one when you multiply by 10 it would give a number from  0to10
+        chance = Math.round(chance); //rounds number for example 0.6 to 1
+        if (chance <= 7) //7 percent chance of landing the blow if the number genrator picks a number Less Than or Equal To 7
         {
           System.out.println("You dealt 4 damage to the enemy!");
           enemy = enemy-4; //damage to enemy
           System.out.println("The enemy's health is "+enemy+".");
         }
-        if (chance > 7)
+        if (chance > 7) //higer then 7
         {
           System.out.println("You missed!"); 
         }
-        if (enemy <= 0) //if enemys health is 0 or lower you win
+        if (enemy <= 0) //if enemys health is = 0 or lower you win <=
         {
           System.out.println("You won!");
-          return;
+          return;     //return basicly tells the player you won the battle then displays the text
         }
       }
       if (yourAttack == 2)
@@ -51,11 +51,11 @@ class SkyrimPro
         {
           chance = (Math.random()*(10-1))+1;
           chance = Math.round(chance);
-          if (chance <= 8)    //dodge chance
+          if (chance <= 8)    //dodge chance lower then 8 you dodge 
           {
             System.out.println("You dodged the attack!");
           }
-          if (chance > 8) 
+          if (chance > 8)    //doge higher then 8 you get hit
           {
             System.out.println("The enemy hits you anyway!");
             System.out.println("You took 2 damage!");
@@ -66,12 +66,12 @@ class SkyrimPro
         {
           System.out.println("Bad move! The enemy easily hits you!");
           System.out.println("You took 2 damage!");
-          health = health-2; //if you fail a dodge this code appears
+          health = health-2; //if you fail a dodge this code appears and you take damage
         }
         if (dodge == 3)
         {
           chance = (Math.random()*(10-1))+1;
-          chance = Math.round(chance);
+          chance = Math.round(chance);   //Math.round() function returns the value of a number rounded to the nearest integer example 
           if (chance <= 6)
           {
             System.out.println("You countered the attack!");
@@ -2210,7 +2210,7 @@ class SkyrimPro
   }
   public static void main (String args[])
   {
-    double chance = 0; //Variables
+    double chance = 0; //main player Variables
     int weapon = 0;            
     int GuardFight = 0;
     int health = 5; //your health 
@@ -2225,7 +2225,7 @@ class SkyrimPro
       System.out.println("You decide to wait.");
       System.out.println("You continue to wait in the wagon until you reach a small village.");
       System.out.print("The guards force you out of the wagon and take you to the executioner.");
-      int x = 2;
+      int x = 2; //if i change this it a to 3 it will make the sentence loop 3 times
       int y = 0;
       int Ques2=0;  //loops the sentence found this code when i was researching loops
     while(x>y && Ques2!=2)
@@ -2419,12 +2419,12 @@ class SkyrimPro
          {
            System.out.println("Will you open the bag or leave it?");
            System.out.println("Enter 1 to open bag or 2 to leave it");
-           int Ques8=In.getInt();  //its gonna loop until you search the bag because you need the bow inside for later
+           int Ques8=In.getInt();  
            if(Ques8==1)
            {
              System.out.println("You decide to open the bag");
              System.out.println("You find a bow and arrow in the bag.");
-             LoopQues8++;
+             LoopQues8++;//its gonna loop until you search the bag because you need the bow inside for later
            }
            if(Ques8==2)
            {
@@ -2711,6 +2711,7 @@ class SkyrimPro
             System.out.println("The End.");
             System.out.println("You beat the game! Peaceful ending.");
             W17++;
+             
           }
           if(Ques17==2)
           {
